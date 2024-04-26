@@ -1,0 +1,6 @@
+function createStudentCard(){
+    studentList.forEach(
+        
+    )
+
+}

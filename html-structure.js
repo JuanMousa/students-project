@@ -41,7 +41,7 @@ function appendStudentsToUl(studentList, studentElement) {
     studentElement.appendChild(studentCard);
   });
 }
-// 
+
 
 const listOfStudents = document.getElementById("studentList");
 appendStudentsToUl(studentList, listOfStudents);

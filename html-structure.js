@@ -1,34 +1,47 @@
 
-function appendStudentsToUl(studentList, ulElement) {
+function appendStudentsToUl(studentList, studentElement) {
   studentList.forEach((student, index) => {
     
-    const li = document.createElement("li");
-    li.classList.add(`student-${index}`); // Добавляем класс "student-N", где N - индекс студента в массиве
-    
-    const name = document.createElement("p");
-    name.textContent = `Name: ${student.name}`;
-    name.classList.add("student-name"); // Добавляем класс "student-name" к элементу <p> с именем
-    li.appendChild(name);
-    
-    const skills = document.createElement("p");
-    skills.textContent = `Skills: ${student.skill.join(", ")}`;
-    skills.classList.add("student-skills"); // Добавляем класс "student-skills" к элементу <p> с навыками
-    li.appendChild(skills);
-    
-    const hobbies = document.createElement("p");
-    hobbies.textContent = `Hobbies: ${student.hobby.join(", ")}`;
-    hobbies.classList.add("student-hobbies"); // Добавляем класс "student-hobbies" к элементу <p> с хобби
-    li.appendChild(hobbies);
-    
+    const studentCard = document.createElement("div");
+    studentCard.classList.add(`student-${index}`, `col-3`); // Добавляем класс "student-N", где N - индекс студента в массиве
+
     const photo = document.createElement("img");
     photo.src = student.photo;
-    photo.width = 100;
+    photo.alt = student.name;
     photo.classList.add("student-photo"); // Добавляем класс "student-photo" к изображению
-    li.appendChild(photo);
-    ulElement.appendChild(li);
+    studentCard.appendChild(photo);
+
+    const name = document.createElement("h2");
+    name.textContent = `${student.name}`;
+    name.classList.add("student-name"); // Добавляем класс "student-name" к элементу <p> с именем
+    studentCard.appendChild(name);
+    
+    const skillsList = document.createElement("ul");
+    skillsList.classList.add("student-skills", "list-group", "list-group-horizontal-sm"); // Добавляем класс "student-skills" к элементу <p> с навыками
+    studentCard.appendChild(skillsList);
+    
+    student.skill.forEach((skillItem) =>{
+        const skillElement = document.createElement("li");
+        skillElement.classList.add("skills-item","list-group-item");
+        skillElement.textContent = skillItem;
+        skillsList.appendChild(skillElement);
+    });
+
+    const hobbiesList = document.createElement("ul");
+    hobbiesList.classList.add("student-hobbies", "list-group", "list-group-horizontal-sm");
+    studentCard.appendChild(hobbiesList);
+
+    student.hobby.forEach((hobbyItem) =>{
+        const hobbyElement = document.createElement("li");
+        hobbyElement.classList.add("hobbies-item","list-group-item");
+        hobbyElement.textContent = hobbyItem;
+        hobbiesList.appendChild(hobbyElement);
+    });
+    
+    studentElement.appendChild(studentCard);
   });
 }
 // 
 
-const ul = document.getElementById("studentList");
-appendStudentsToUl(studentList, ul);
+const listOfStudents = document.getElementById("studentList");
+appendStudentsToUl(studentList, listOfStudents);

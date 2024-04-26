@@ -1,8 +1,8 @@
 const studentList = [{
-  name: "Juan",
+  name: "Olha",
   skills: ["HTML", "CSS", "JS", "Three.js"], //studentList[0].skills[0]
   hobby: ["programing", "reading"],
-  photo: "img/Juan-1.jpg"
+  photo: "img/Olha-1.jpg"
 }, {
   name: "Shakir",
   skills: ["HTML", "CSS", "JS", "SQL", "C#", "JAVA"],
@@ -14,10 +14,10 @@ const studentList = [{
   hobby: ["programing", "reading"],
   photo: "img/Frank-1.jpg"
 }, {
-  name: "Yuri",
+  name: "Enes",
   skills: ["HTML", "CSS", "JS"],
   hobby: ["programing", "reading"],
-  photo: "img/Frank-1.jpg"
+  photo: "img/Enes-1.jpg"
 
 }, {
   name: "Yuri",
@@ -25,10 +25,10 @@ const studentList = [{
   hobby: ["programing", "reading"],
   photo: "img/Yuri-1.jpg"
 }, {
-  name: "Enes",
-  skills: ["HTML", "CSS", "JS"],
-  hobby: ["programing", "reading"],
-  photo: "img/Enes-1.jpg"
+  name: "Kashif",
+  skills: ["HTML", "CSS", "JS", "REACT", "NEXT.JS"],
+  hobby: ["programing", "reading", "travelling"],
+  photo: "img/Kashif-1.jpg"
 }
 ];
 

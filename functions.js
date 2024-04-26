@@ -33,8 +33,8 @@ function filterAndHideElements(text, studentList) {
 }
 
 document.getElementById('skills').addEventListener('change', function () {
-    const selectedSkill = this.value.toLowerCase();
-    filterAndHideElements(selectedSkill, studentList); // Run the filter and hide elements function
+    const selectedSkill = this.value; // Получаем выбранное значение из элемента select
+    filterAndHideElements(selectedSkill, studentList); // Запускаем функцию фильтрации и скрытия элементов
 });
 
 document.getElementById('hobby').addEventListener('change', function () {
@@ -52,5 +52,3 @@ document.getElementById('hobby').addEventListener('change', function () {
 
 
 
-let test = filterBySkills("Python", studentList);
-console.log(test);

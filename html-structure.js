@@ -20,7 +20,7 @@ function appendStudentsToUl(studentList, studentElement) {
     skillsList.classList.add("student-skills", "list-group", "list-group-horizontal-sm"); // Добавляем класс "student-skills" к элементу <p> с навыками
     studentCard.appendChild(skillsList);
     
-    student.skill.forEach((skillItem) =>{
+    student.skills.forEach((skillItem) =>{
         const skillElement = document.createElement("li");
         skillElement.classList.add("skills-item","list-group-item");
         skillElement.textContent = skillItem;

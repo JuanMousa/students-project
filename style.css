@@ -1,4 +1,77 @@
+html {
+    font-size: 10px;
+}
+body{
+    font-size: 1.6rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.row {
+    --bs-gutter-x: 3rem;
+}
+.m-30{
+    margin-bottom: 3rem;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.h1, h1 {
+    font-size: calc(3rem + 1.5vw);
+}
+.h2, h2 {
+    font-size: calc(2rem + 1.5vw);
+}
+header {
+    padding: calc(6rem + 1.5vw) 0;
+    background-color: #f0f0f0;
+    margin-bottom: 3rem;
+}
+header .page-title span{
+    color:#c32e4c;
+}
+.page-description{
+    max-width: 70%;
+}
+.filter-title {
+    font-size: 2rem;
+}
+
+.student-info {
+    border: 2px solid #e6e6e6;
+    border-top:none;
+    text-align: center;
+    padding: 2rem 1rem 1rem 2rem;
+}
+.student-card:hover img {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(102,102,102,1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(102,102,102,1);
+    box-shadow: 0px 0px 15px 0px rgba(102,102,102,1);
+    transition: box-shadow 0.4s ease-in-out;
+}
 img.student-photo{
     width: 100%;
     max-width: 400px;
+}
+.student-name {
+    margin-bottom: 1rem;
+}
+ul.student-skills, ul.student-hobbies {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none; 
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+}
+ul.student-skills li, ul.student-hobbies li {
+    padding:.5rem;
+}
+@media (min-width: 1200px) {
+
 }
